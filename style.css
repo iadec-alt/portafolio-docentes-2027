@@ -78,3 +78,8 @@ footer button:hover,footer button:focus-visible{background:rgba(255,255,255,.32)
 footer #next[style*="hidden"]{visibility:hidden!important}
 @media(max-width:768px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom))!important}footer{padding:10px 12px calc(10px + env(safe-area-inset-bottom))!important}footer button{min-width:104px}.active-slide{padding-bottom:calc(84px + env(safe-area-inset-bottom))!important}}
 @media(max-width:520px){footer>div{display:none!important}}
+
+/* Botones visibles incluso en el último slide */
+footer button:disabled{visibility:visible!important;display:inline-flex!important;opacity:.45!important;cursor:not-allowed!important;pointer-events:none!important}
+footer button:not(:disabled){visibility:visible!important;opacity:1!important}
+@media(max-width:768px){footer{bottom:0!important;transform:none!important}footer button{position:relative!important;z-index:2!important}}
