@@ -67,3 +67,14 @@ footer #next[style*="hidden"]{visibility:hidden!important}
 /* Responsive cards for honorarios y cierre */
 #slide-11 .grid>article{min-width:0;height:auto}
 @media(max-width:768px){#slide-11 .grid{grid-template-columns:1fr!important}#slide-11 .grid>article{flex-shrink:0!important}#slide-12{justify-content:center!important}#slide-12 h2{line-height:1.12!important}}
+
+
+/* Navegación persistente: funciona en escritorio, tablet y móvil */
+body{box-sizing:border-box!important;padding-bottom:calc(78px + env(safe-area-inset-bottom))!important}
+main{min-height:0!important;overflow:hidden!important}
+footer{position:fixed!important;left:0!important;right:0!important;bottom:0!important;z-index:9999!important;display:flex!important;align-items:center!important;justify-content:space-between!important;visibility:visible!important;opacity:1!important;width:100%!important;max-width:none!important;box-sizing:border-box!important;margin:0!important;padding:12px max(16px,env(safe-area-inset-left)) calc(12px + env(safe-area-inset-bottom)) max(16px,env(safe-area-inset-right))!important;background:linear-gradient(180deg,rgba(37,33,111,.92),rgba(26,23,84,.98))!important;border-top:1px solid rgba(255,255,255,.2);box-shadow:0 -8px 22px rgba(10,9,40,.22)}
+footer button{display:inline-flex!important;align-items:center!important;justify-content:center!important;flex:0 0 auto!important;min-width:112px;min-height:43px!important;color:white!important;background:rgba(255,255,255,.19)!important;border:1px solid rgba(255,255,255,.28)!important;border-radius:12px!important;font-size:13px!important;font-weight:800!important;opacity:1!important;white-space:nowrap}
+footer button:hover,footer button:focus-visible{background:rgba(255,255,255,.32)!important;outline-offset:3px}
+footer #next[style*="hidden"]{visibility:hidden!important}
+@media(max-width:768px){body{padding-bottom:calc(76px + env(safe-area-inset-bottom))!important}footer{padding:10px 12px calc(10px + env(safe-area-inset-bottom))!important}footer button{min-width:104px}.active-slide{padding-bottom:calc(84px + env(safe-area-inset-bottom))!important}}
+@media(max-width:520px){footer>div{display:none!important}}
