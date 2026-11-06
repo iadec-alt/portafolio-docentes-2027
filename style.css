@@ -155,3 +155,27 @@ main>.active-slide>*{flex-shrink:0!important}
 #slide-12.active-slide{display:flex;align-items:center;justify-content:center!important}
 #slide-12 .final-logo{display:block;width:min(78%,680px);height:auto;max-height:64vh;object-fit:contain;margin:auto;flex-shrink:0}
 @media(max-width:768px){#slide-12.active-slide{justify-content:center!important;padding-bottom:20px!important}#slide-12 .final-logo{width:min(90%,580px);max-height:50vh}}
+
+/* Instrucciones de interacción explícitas, siempre visibles y legibles. */
+.interaction-hint{
+  display:block!important;
+  color:#ffb15c!important;
+  font-size:clamp(14px,1.2vw,17px)!important;
+  font-weight:750!important;
+  line-height:1.5!important;
+  margin-top:10px!important;
+  margin-bottom:4px!important;
+  max-width:75rem;
+  flex-shrink:0!important;
+}
+#slide-12 .final-logo{
+  width:min(40%,330px)!important;
+  max-width:330px!important;
+  height:auto!important;
+  max-height:36vh!important;
+  object-fit:contain!important;
+}
+@media(max-width:768px){
+  #slide-12 .final-logo{width:min(72%,290px)!important;max-width:290px!important;max-height:30vh!important}
+  .interaction-hint{font-size:14px!important}
+}
