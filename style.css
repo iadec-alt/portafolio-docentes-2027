@@ -179,3 +179,6 @@ main>.active-slide>*{flex-shrink:0!important}
   #slide-12 .final-logo{width:min(72%,290px)!important;max-width:290px!important;max-height:30vh!important}
   .interaction-hint{font-size:14px!important}
 }
+
+/* Solo diapositiva 12: ocultar marca superior derecha, mantener todo lo demás. */
+body:has(#slide-12.active-slide) header .text-right{display:none!important}
