@@ -141,3 +141,17 @@ main>.active-slide>*{flex-shrink:0!important}
   main>.active-slide,
   #slide-9.active-slide{padding-bottom:20px!important}
 }
+
+/* Las tarjetas activas de metodologías y cursos se distinguen en blanco. */
+.method-chip.active,.course-card.active{
+  background:#ffffff!important;
+  color:#211c50!important;
+  border:1px solid #ffffff!important;
+  box-shadow:0 10px 26px rgba(6,5,35,.23)!important;
+}
+.method-chip.active .text-purple-200,.course-card.active .text-purple-200{color:#4338ca!important}
+.method-chip.active .font-extrabold,.course-card.active .font-extrabold{color:#211c50!important}
+.method-chip.active:hover,.course-card.active:hover{background:#ffffff!important}
+#slide-12.active-slide{display:flex;align-items:center;justify-content:center!important}
+#slide-12 .final-logo{display:block;width:min(78%,680px);height:auto;max-height:64vh;object-fit:contain;margin:auto;flex-shrink:0}
+@media(max-width:768px){#slide-12.active-slide{justify-content:center!important;padding-bottom:20px!important}#slide-12 .final-logo{width:min(90%,580px);max-height:50vh}}
