@@ -31,6 +31,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: .
+      - name: Liberar despliegue anterior bloqueado
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh api --method POST repos/${{ github.repository }}/pages/deployments/9d2bd8617d4fe84859653e022d513c58e702a466/cancel || true
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
